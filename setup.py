@@ -66,18 +66,18 @@ def get_version():
             os.path.dirname(__file__), 'rope', '__init__.py')) as inif:
         for line in inif:
             if line.startswith('VERSION'):
-                version = line.split('=')[1].strip(" \t'")
+                version = line.split('=')[1].strip(" \n'")
                 break
     return version
 
 
-setup(name='rope',
+setup(name='ropee',
       version=get_version(),
       description='a python refactoring library...',
       long_description=get_long_description(),
-      author='Ali Gholami Rudi',
-      author_email='aligrudi@users.sourceforge.net',
-      url='https://github.com/python-rope/rope',
+      author='Harry Papaxenopoulos',
+      author_email='hpapaxen@gmail.com',
+      url='https://github.com/hpapaxen/rope/tree/ropee',
       packages=['rope',
                 'rope.base',
                 'rope.base.oi',
