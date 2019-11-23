@@ -19,6 +19,8 @@ class ParamProvider(interfaces.IParamProvider):
         superfunc = pyfunc
         visited = []
         while superfunc not in visited:
+            visited.append(superfunc)
+
             result = self._delegate(superfunc, param_name)
             if result:
                 return result
@@ -26,8 +28,6 @@ class ParamProvider(interfaces.IParamProvider):
 
             if not superfunc:
                 break
-
-            visited.append(superfunc)
 
 
 class ReturnProvider(interfaces.IReturnProvider):
