@@ -27,7 +27,7 @@ class ParamProvider(interfaces.IParamProvider):
             if not superfunc:
                 break
 
-            visited.add(superfunc)
+            visited.append(superfunc)
 
 
 class ReturnProvider(interfaces.IReturnProvider):
